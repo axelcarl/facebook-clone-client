@@ -5,9 +5,351 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(204, 204, 204);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+input {
+  height: 40px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 0.1px solid rgb(185, 183, 183);
+  text-align: left;
+  padding-left: 10px;
+  font-size: 16px;
+  color: rgb(80, 80, 80);
+}
+
+button {
+  height: 40px;
+  border-radius: 5px;
+  border: 0px;
+  color: white;
+  font-size: 22px;
+  background-color: grey;
+  font-weight: bold;
+  
+  position: relative;
+  transition: background-color 0.2s ease-in;
+}
+
+button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(71, 71, 71, 0.103);
+  opacity: 0;
+  transition: opacity 0.2s ease-in;
+}
+
+button:hover:before {
+  opacity: 1;
+}
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(236, 236, 236);
+}
+
+.form-holder {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  min-width: 300px;
+  max-height: 280px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 00 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+  padding: 15px;
+}
+
+.login-button {
+  background-color: rgb(54, 128, 240);
+  height: 45px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.login-header {
+  color: rgb(54, 125, 219);
+  font-size: 50px;
+}
+
+.signup-button {
+  background-color: rgb(107, 185, 91);
+  align-self: center;
+  height: 45px;
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.divider {
+  border-top: 1px solid rgba(206, 205, 205, 0.753);
+  margin: 5px 0;
+}
+
+.homepage {
+  height: 100vh;
+  background-color: rgb(204, 204, 204);
+  width: 100vw;
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.feed {
+  width: 45vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  min-width: 360px;
+  width: 100%;
+  max-height: 280px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 00 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.profile-pic {
+  border-radius: 6px;
+  background-color: black;
+  width: 40px;
+  height: 40px;
+  background-image: url('https://nakedsecurity.sophos.com/wp-content/uploads/sites/2/2013/08/facebook-silhouette_thumb.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.message-info {
+  display: flex;
+}
+
+.presentation {
+  margin-left: 10px;
+}
+
+.profile-name {
+  font-weight: bold;
+}
+
+.message-text {
+  margin-top: 10px;
+}
+
+.message-container > .divider {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.message-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.message-actions > div {
+  text-align: center;
+}
+
+.message-form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  min-width: 360px;
+  width: 100%;
+  max-height: 280px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 00 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+  padding: 15px;
+  margin-top: 20px;
+}
+
+.main-row {
+  display: flex;
+
+}
+
+.main-row > input {
+  flex: content;
+  margin-left: 10px;
+  background-color: rgb(236, 235, 235);
+  border-radius: 15px;
+  height: 38px;
+}
+
+#signup-form {
+  max-height: 800px;
+}
+
+.go-back-login-btn {
+  width: 20px;
+  height: 20px;
+  font-size: 10px;
+  align-self:flex-end;
+  margin-bottom: 5px;
+  background-color: black;
+}
+
+.banner-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  height: 70px;
+  width: 100vw;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 00 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+}
+
+.banner-logo {
+  font-weight: bold;
+  color: rgb(54, 125, 219);
+  font-size: 50px;
+  margin-left: 70px;
+}
+
+.banner-search {
+  align-self: flex-end;
+  height: 70px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  margin-top: -70px;
+}
+
+.banner-search > input {
+  background-color: rgb(219, 219, 219);
+  border-radius: 20px;
+  margin-right: 70px;
+  margin-top: 15px;
+}
+
+.sidepanel {
+  position: fixed;
+  height: 100%;
+  width: 20%;
+  display: grid;
+  grid-template-rows: 300px 40px 10px 100px
+}
+
+.sidepanel-title {
+  font-weight: 500;
+  color: rgb(121, 121, 121);
+  grid-row: 2;
+  text-align: center;
+  font-size: 22px;
+}
+
+.sidepanel > .divider {
+  border-top: 1px solid rgba(0, 0, 0, 0.103);
+  width: 80%;
+  margin: 5px 0;
+  margin-left: 15px;
+  grid-row: 3;
+}
+
+.sidepanel-component {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  grid-row: 4;
+}
+
+.sp-left {
+  left: 0px;
+  top: 70px;
+}
+
+.sp-right {
+  right: 0px;
+  top: 70px;
+}
+
+.friend-widget {
+  height: 300px;
+}
+
+.friend-widget > .friend {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-bottom: 10px;
+}
+
+.friend > .profile-pic {
+  height: 30px;
+  width: 30px;
+  border-radius: 100px;
+}
+.friend > .profile-name {
+  color:rgb(80, 80, 80);
+  grid-column: 2 / 5;
+  font-size: large;
+  margin-top: 5px;
+}
+
+.friend-XL {
+  display: flex;
+  margin-top: 100px;
+  margin-left: 20px;
+  gap: 10px;
+  align-items: center;
+}
+
+.friend-XL > .profile-pic{
+  height: 50px;
+  width: 50px;
+  border-radius: 12px;
+}
+
+.friend-XL > .profile-name {
+  font-size: xx-large;
+  font-weight: 100;
+}
+
+.friend-XL .send-req {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 10%;
+}
+
+.friend-XL button {
+  background-color: rgb(61, 135, 201);
+  margin-top: 5px;
+}
+
+.accept-req-btn {
+  border-radius: 100%;
+  height: 28px;
+  width: 28px;
+  background-color: rgb(31, 209, 120);
+  margin-left: 10px;
+  margin-top: 3px;
+  color: white;
 }
